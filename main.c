@@ -16,11 +16,16 @@ int main(){
     switch (y){
         case 1: printf("case 1 selected\n");
         for(int i=0;i<x;i++){
-            printf("\n This section is for insertion ");
+            // printf("\n This section is for insertion of index %d \n",i);
             printf("\n For postion %d Enter value : ",i);
             scanf("%d",(arr+i));
-
-            printf("\n Value in array : %d \n",*(arr+i));
+            // if(x=i){
+            // for(int i= 0;i<=x;i++){
+            // printf("\n Value in array : %d is %d \n",i, *(arr+i));
+            // }
+            // continue;
+            // }
+            // printf("\n Value in array : %d \n",*(arr+i));
         }
         break;
         case 2: printf("case 2 selected\n");
@@ -28,15 +33,17 @@ int main(){
                 printf("\n This section is for Travelsing the array");
                 // printf("\n For postion %d Enter value : ",i);
                 // scanf("%d",arr+0);
-                printf("\n Value in array : %ls \n",*(arr+i));
-        }
+                for(int i= 0;i<=x;i++){
+                printf("\n Value in array : %d is %d \n",i, *(arr+i));
+                }
+            }
         break;
         case 3: printf("case 3 selected\n");
         for(int i=5;i>=x;i--){
             printf("\n This section is for Travelsing the array descending order ");
             // printf("\n For postion %d Enter value : ",i);
             // scanf("%d",arr+0);
-            printf("\n Value in array : %d \n",(arr-i));
+            printf("\n Value in array : %d \n",*(arr-i));
         }
         break;
 
