@@ -1,0 +1,8 @@
+To compile c use gcc <filename>.c
+to execute c filename ./a.out
+***********git************
+to push git use
+git add .
+git status //check weather file has included
+git commit -m 'Your message'
+git push //to push 
