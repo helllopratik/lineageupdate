@@ -5,9 +5,9 @@ int x = 10;
 int y = 20;
 int z = 30;
 int main(){
-    int *ptr=&x;
-    int *ptr1 = &y;
-    printf("%u, %u \nDifference between two pointers is  %ld \n", x,y, ptr1-ptr);
+   int *ptr=&x;
+   int *ptr1 = &y;
+    printf("%d, %d \nDifference between two pointers is  %ld \n", *ptr,*ptr, ptr1-ptr);
     *ptr=*ptr1;
     printf("Comarision = %u", ptr == ptr1);
     // sum();
