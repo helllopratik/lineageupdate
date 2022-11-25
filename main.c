@@ -1,10 +1,17 @@
 #include <stdio.h>
 #include <math.h>
 int sum(),sub();
+int x = 10;
+int y = 20;
+int z = 30;
 int main(){
-    printf("Hello world\n"); 
-    sum();
-    sub();
+    int *ptr=&x;
+    int *ptr1 = &y;
+    printf("%u, %u \nDifference between two pointers is  %ld \n", x,y, ptr1-ptr);
+    *ptr=*ptr1;
+    printf("Comarision = %u", ptr == ptr1);
+    // sum();
+//  sub();
     return 0;
 };
 

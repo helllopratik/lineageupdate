@@ -6,3 +6,5 @@ git add .
 git status //check weather file has included
 git commit -m 'Your message'
 git push //to push 
+
+git add . && git status &&  git commit -m 'c practise last seen' && git push
