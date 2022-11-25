@@ -6,10 +6,10 @@ int y = 20;
 int z = 30;
 int main(){
    int *ptr=&x;
-   int *ptr1 = &y;
-    printf("%d, %d \nDifference between two pointers is  %ld \n", *ptr,*ptr, ptr1-ptr);
-    *ptr=*ptr1;
-    printf("Comarision = %u", ptr == ptr1);
+   int *ptrr = &y;
+    printf("%d, %d \nDifference between two pointers is  %ld \n", *ptr,*ptrr, ptrr-ptr);
+    *ptr=*ptrr;
+    printf("Comarision = %u", ptr == ptrr);
     // sum();
 //  sub();
     return 0;
