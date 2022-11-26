@@ -10,7 +10,7 @@ int main(){
     return 0;
 };
 void printNumber(int arr[],int n){
-    for(int i;i<n;i++){
+    for(int i=0;i<n;i++){
         printf("%d \t",arr[i]);
         if(i==0){
             printNumber(arr,10);
