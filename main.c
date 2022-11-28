@@ -6,7 +6,7 @@ int main(){
     printf("\n");
 }
 void reverse(int arr[],int f){
-    for(int i=0;i<=f/2;i++){
+    for(int i=0;i<f/2;i++){
         int q = arr[i];
         int w = arr[f-i-1];
         w=arr[i];
