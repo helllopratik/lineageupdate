@@ -1,11 +1,14 @@
 #include <stdio.h>
-
-int x,y,z;
-// int arr[int i] [ {1,]3,4,5};
+void reverse(int arr[],int n);
 int main(){
-    int i =0;
-    int arr[] = {1,2,3,4,5};
-    printf("\tPointer\n");
-    printf("%d\n",*(arr+6));
+    int arr[] = {1,2,3,4,5,6,7,8,9,10,11};
+    printf("reverse an array\n");
+    reverse(arr,10);
     return 0;
 }
+void reverse (int arr[],int n){
+        for(int i=0;i<=n;i++){
+        printf("%d ",arr[n-i]);
+        }
+        printf("\n");
+        }
