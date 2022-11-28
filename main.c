@@ -1,31 +1,11 @@
 #include <stdio.h>
-#include <math.h>
-int arr[] = {2,1,4,5,6,7,8,9,0};
-int odd(int arr[],int n);
-int even=0;int oddd=0;
+
+int x,y,z;
+// int arr[int i] [ {1,]3,4,5};
 int main(){
-    printf("Array Code\n");
-    odd(arr,9);
-    printf(" Even : %d, Odd : %d\n",even,oddd);
-
-}
-
-int odd(int arr[],int n){
-    int i = 0;
-    // int even=0;int oddd=0;
-    for(i=0;i<n;i++){
-        // printf("Odd Number in the array\n");
-        if(arr[i]%2!=0){
-           even++;
-        //    printf("odd numbers : %d\n",arr[i]);
-        }
-        else
-        oddd++;
-        // printf("Even Number : %d\n",arr[i]);
-
-        
-
-    }
-return even,oddd;
-   
+    int i =0;
+    int arr[] = {1,2,3,4,5};
+    printf("\tPointer\n");
+    printf("%d\n",*(arr+6));
+    return 0;
 }
