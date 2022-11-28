@@ -1,26 +1,24 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
-void stack(),printNumber(int arr[],int n);
-
+int arr[] = {2,1,4,5,6,7,8,9,0};
+int odd(int arr[],int n),even();
 int main(){
-    printf("Array Printing Number");
-    int arr[] = {1,2,3,4,5,6};
-    printNumber(arr,9);
-    return 0;
-};
-void printNumber(int arr[],int n){
-    for(int i=0;i<n;i++){
-        printf("\t %d \n",arr[i]);
-        // if(i==0){
-        //     break;
-        // }
-        // if(i==7){
-        // stack();
-        // }
+    printf("Array Code\n");
+    odd(arr,9);
+
+}
+
+int odd(int arr[],int n){
+    int i = 0;
+    for(i=0;i<n;i++){
+        // printf("Odd Number in the array\n");
+        if(arr[i]%2!=0){
+           printf("odd numbers : %d\n",arr[i]);
+        }
+        else
+        printf("Even Number : %d\n",arr[i]);
+        
+
     }
-};
-void stack(){
-    printf("Call By value\n");
-    exit(0);
+   
 }
