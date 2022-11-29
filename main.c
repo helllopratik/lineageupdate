@@ -1,17 +1,35 @@
 #include <stdio.h>
-void reverse(int arr[],int f);
-int main(){
-    int arr[] = {1,2,3,4,5,6};
-    reverse(arr,6);
-    printf("\n");
-}
-void reverse(int arr[],int f){
-    for(int i=0;i<f/2;i++){
-        int q = arr[i];
-        int w = arr[f-i-1];
-        w=arr[i];
-        q=arr[f-i-1];
-        printf("%d, %d",w,q);
-    }
+#include <math.h>
 
+int sum(int arr[],int n);
+int show(int arr[],int n);
+int x,y,z;
+int main();
+int arr[10];
+int main(){
+        printf("Choosen value 1 \n");
+        printf("Total size of array : ");
+        scanf("%d",&y);
+        sum(arr,y);
+    
+    return 0;
+}
+int sum(int arr[],int n){
+
+    for(int i =0;i<n;i++){
+        printf("Enter value for index i = %d : ",i);
+        scanf("%d",&arr[n-i+1]);
+        // printf("%d\n",arr[n-i+1]);
+    }
+    printf("\n***********************\n");
+    show(arr,n);
+
+    
+}
+
+int show(int arr[],int n){
+    for(int t=0;t<n;t++){
+        printf("%d\n",arr[n-t+1]);
+    }
+    return 0;
 }
