@@ -21,8 +21,12 @@ int sum(int arr[],int n){
         scanf("%d",&arr[n-i+1]);
         // printf("%d\n",arr[n-i+1]);
     }
+    for(int i =0;i<n;i++){
+        int z = arr[(i+1)+(i+2)];
+       printf("%d",arr[i]);
+    }
     printf("\n***********************\n");
-    show(arr,n);
+    // show(arr,n);
 
     
 }
