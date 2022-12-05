@@ -2,16 +2,13 @@
 
 int main(){
     FILE *fptr;
-    fptr = fopen("odd.txt","w");
-    int n;
-    printf("Enter n: ");
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++){
-        if(i%2!=0){
-            fprintf(fptr,"%d\n",i);
-
-        }
-    }
+    fptr = fopen("odd.txt","r");
+    int a,b;
+    fscanf(fptr,"%d",&a);
+    fscanf(fptr,"%d",&b);
     fclose(fptr);
+    fptr = fopen("sum.txt","w");
+    fprintf(fptr,"%d",a+b);
+    return 0;
 
 }
