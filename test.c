@@ -1,7 +1,9 @@
 #include <stdio.h>
+void solve() {
+    int x = printf("Hello");
+    printf(" %d\n", x);
+}
 int main() {
-    int a = 3;
-    int res = a++ + ++a + a++ + ++a;
-    printf("%d\n", res);
+	solve();
 	return 0;
 }
