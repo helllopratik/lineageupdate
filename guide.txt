@@ -8,3 +8,11 @@ git commit -m 'Your message'
 git push //to push 
 
 git add . && git status &&  git commit -m 'c practise last seen' && git push
+
+to run gui for c program
+g++ <file name main.cpp> -o base `pkg-config --cflags --libs gtk+-3.0`
+where, 'base' in above code refer to the filename of the compiled gcc file.
+You can change 'base' to any other name, according to your convience.
+To run gui program written in c or c++
+
+GDK_SCALE=5 ./<filename>
