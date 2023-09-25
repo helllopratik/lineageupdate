@@ -1,6 +1,6 @@
 /*
 
-Program for Dynamic Memory Allocation using malloc()
+Program to access Array of int Pointers
 
 */
 
