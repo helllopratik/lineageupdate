@@ -19,14 +19,14 @@ if (ptr == NULL){
 }
 else {
     for(b=0;b<a;b++){
-        printf("Enter element for position %d",b);
-        scanf("%d",*(&ptr[b]));
+        printf("Enter element for position %d ",b);
+        scanf("%d",ptr+b);
     }
 };
 printf("\n Entered element :");
 for(b=0;b<a;b++){
     
-    printf("%d",*(&ptr[b]));
+    printf("%d\n",ptr[b]);
 }
     
 
