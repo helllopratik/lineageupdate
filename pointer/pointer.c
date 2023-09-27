@@ -1,34 +1,45 @@
 /*
 
-Program to access Array of int Pointers
+ pointer comparison for same type of pointer
 
 */
 
 #include <stdlib.h>
 #include <stdio.h>
+
 int main() {
-int a,b,*ptr,c,d;
-printf("Enter total element : ");
-scanf("%d",&a);
+    int comp(int *x, int *y);
+    int const max =5;
+    int a=5,b=9,c,*ptr,*ptr1;
+// int(*fptr)(int,int);
+// fptr=comp;
+ptr=NULL;
+ptr1=&b;
+printf("\n%d\n",ptr);
 
-ptr = (int *)malloc(a*sizeof(int));
-if (ptr == NULL){
-    printf("\nInvalid Input");
-    return 500;
-
-}
-else {
-    for(b=0;b<a;b++){
-        printf("Enter element for position %d ",b);
-        scanf("%d",ptr+b);
-    }
+return 56;
 };
-printf("\n Entered element :");
-for(b=0;b<a;b++){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     printf("\n");
+
+
     
-    printf("%d\n",ptr[b]);
-}
     
 
-    return 0;
-}
+//     return 0;
+// }
