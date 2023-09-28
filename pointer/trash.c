@@ -1,35 +1,35 @@
 #include<stdio.h>
-
-int y;
-
-/*
-    Function to add two numbers and
-    return the result
-*/
-int add(int m, int n)
-{
-    if(n == 0)
-        return m;
-
-    /*
-        Recursion: adding 1, n times and 
-        then at the end adding m to it
-    */
-    printf("\tattempting'M' %d\n",m);
-    
-    printf("\tattempting'N' %d\n",n);
-    y = add(m, n-1) + 1;
-    printf("\tattempting'Y' %d\n",y);
-    return y;   // return the result
-}
+// declaring the function
+void printFibo(int );
 
 int main()
 {
-    int a, b, r;
-    printf("Enter the two numbers:\n");
-    scanf("%d%d", &a, &b);
-    r = add(a, b);     // function call
-    printf("\n\nSum of two numbers is: %d\n\n", r);
-   
+    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
+    int k, n;
+    long int i = 0, j = 1;
+    printf("Enter the length of the Fibonacci series: ");
+    scanf("%d", &n);
+    printf("\n\nfirst %d terms of Fibonacci series are:\n\n\n",n);
+    printf("%d ", 1);
+    printFibo(n);
+    printf("\n\n\t\t\tCoding is Fun !\n\n\n");
     return 0;
+}
+
+void printFibo(int aj)
+{
+    static long int first = 0, second = 1, sum;
+    if(aj > 1)
+    {
+        sum = first + second;
+        first = second;
+        second = sum;
+        printf("%ld ", sum);
+        printFibo(aj-1);    // recursive call
+    }
+    else
+    {
+        // after the elements, for line break
+        printf("\n\n\n");
+    }
 }
