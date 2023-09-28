@@ -1,35 +1,30 @@
 #include<stdio.h>
-// declaring the function
-void printFibo(int );
 
-int main()
+// declaring recursive function
+char* reverse(char* str);
+
+void main()
 {
-    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
-    int k, n;
-    long int i = 0, j = 1;
-    printf("Enter the length of the Fibonacci series: ");
-    scanf("%d", &n);
-    printf("\n\nfirst %d terms of Fibonacci series are:\n\n\n",n);
-    printf("%d ", 1);
-    printFibo(n);
-    printf("\n\n\t\t\tCoding is Fun !\n\n\n");
-    return 0;
+    int i, j, k;
+    char str[100];
+    char *rev;
+    printf("Enter the string:\t");
+    scanf("%s", str);
+    printf("The original string is: %s\n", str);
+    rev = reverse(str);
+    printf("The reversed string is: %s\n", rev);
+   
 }
 
-void printFibo(int aj)
+// defining the function
+char* reverse(char *str)
 {
-    static long int first = 0, second = 1, sum;
-    if(aj > 1)
+    static int i = 0;
+    static char rev[100];
+    if(*str)
     {
-        sum = first + second;
-        first = second;
-        second = sum;
-        printf("%ld ", sum);
-        printFibo(aj-1);    // recursive call
+        reverse(str+1);
+        rev[i++] = *str;
     }
-    else
-    {
-        // after the elements, for line break
-        printf("\n\n\n");
-    }
+    return rev;
 }

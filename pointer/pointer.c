@@ -2,60 +2,43 @@
 
 
 
-A Fibonacci series is defined as a series in which,
-each number is the sum of the previous two numbers with 1, 1
-being the first two elements of the series.
+C Program to find the
+largest Element in an Array
+using Recursion
 
 */
-
+#include <math.h>
+#define MAX 100;
+int a,b,c,d,z,y,max;
 #include <stdlib.h>
 #include <stdio.h>
-static long int first=0,second=1,y;
-int sum(int y);
+char i[100];
+char *j;
+char* sum(char* i);
 int main() {
-    int a,b,c;
-    printf("\nEntrer value1 to find fibonacci of: ");
-    scanf("%d",&a);
-    printf("%d ",1);
-    // printf("\nEntrer value2: ");
-    // scanf("%d",&b);
-    c=sum(a);
-    printf("\n\tC = %d.\n",c);
+   
+    printf("\nEntrer value1 total element: ");
+    scanf("%s", i);
+    j=sum(i);
+
+
+    printf("\n\tC = %s.\n",j);
 
 
 return 56;
-};
-int sum(int p){
-    /*if(p==0|| p==1){
-        return 1; 
-    }/*
-   /* else if (p==0){
-        return o;
+}
+char* sum(char *i){
+    static int temp =1;
+    static char j[100];
+    if(*i){
+        sum(i+1);
+        j[temp++]=*i;
     }
-    */
-   if(p>1){
-    y=first+second;
-    first=second;
-    second=y;
-    printf("%ld ",y);
-    sum(p-1);
+    return j;
 
+ 
    }
-    else{
-        printf("\n\n\n");
-    }
-    // return y;
-   }
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
