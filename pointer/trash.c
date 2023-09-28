@@ -1,44 +1,35 @@
-#include <stdio.h>
-/* 
-    Global declaration. 
-    Value of a const variable cannot be changed 
-    throughout the execution of program
+#include<stdio.h>
+
+int y;
+
+/*
+    Function to add two numbers and
+    return the result
 */
-const int MAX = 5;  
+int add(int m, int n)
+{
+    if(n == 0)
+        return m;
+
+    /*
+        Recursion: adding 1, n times and 
+        then at the end adding m to it
+    */
+    printf("\tattempting'M' %d\n",m);
+    
+    printf("\tattempting'N' %d\n",n);
+    y = add(m, n-1) + 1;
+    printf("\tattempting'Y' %d\n",y);
+    return y;   // return the result
+}
 
 int main()
 {
-
-    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
-
-    int var[]={10, 20, 30, 40, 50}; // initializing an array(here var) of int pointers
-    int i = 0;
-
-    /*
-        ptr is an array of int pointers i.e. 
-        it stores the address of each array element
-    */
-    int *ptr[MAX];
-
-    for(i = 0; i < MAX; i++)
-    {
-        /*
-            Assign the address of each of the array 
-            element to the ptr array
-        */
-        ptr[i] = &var[i];
-    }
-
-    for(i = 0; i < MAX; i++)
-    {
-        /*
-            ptr[i] stores the address of the element var[i]. 
-            Hence, *ptr[i] returns the value of the element 
-            stored at location ptr[i]
-        */
-        printf("Value of var[%d] = %i\n\n", i, *ptr[i]);
-    }
-
-    printf("\n\n\t\t\tCoding is Fun !\n\n\n");
+    int a, b, r;
+    printf("Enter the two numbers:\n");
+    scanf("%d%d", &a, &b);
+    r = add(a, b);     // function call
+    printf("\n\nSum of two numbers is: %d\n\n", r);
+   
     return 0;
 }
