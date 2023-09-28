@@ -21,9 +21,15 @@ int main() {
 return 56;
 };
 int sum(int p,int o){
-    if(p==0||o==0){
-        return 
+    if(p==0){
+        return o; 
     }
+    else if (o==0){
+        return p;
+
+    }
+    y=sum(p,o-1)-1;
+    return y;
 }
 
 
