@@ -1,46 +1,28 @@
-/*
-
-
-
-C Program to find the
-largest Element in an Array
-using Recursion
-
-*/
-#include <math.h>
-#define MAX 100;
-int a,b,c,d,z,y,max;
-#include <stdlib.h>
 #include <stdio.h>
-char i[100];
-char *j;
-char* sum(char* i);
-int main() {
-   
-    printf("\nEntrer value1 total element: ");
-    scanf("%s", i);
-    j=sum(i);
 
-
-    printf("\n\tC = %s.\n",j);
-
-
-return 56;
-}
-char* sum(char *i){
-    static int temp =1;
-    static char j[100];
-    if(*i){
-        sum(i+1);
-        j[temp++]=*i;
+int main(){
+    FILE *fptr;
+    char name[100];
+    int age;
+    float salary;
+    fptr = fopen("note.txt","w");
+    if(fptr == NULL){
+        printf("File Does not exist\n");
+        return 0;
     }
-    return j;
+    printf("\nEnter the name: ");
+    scanf("%s",name);
+    fprintf(fptr,"name = %s\n",name);
+    printf("\nEnter age for %S: ",name);
+    scanf("%d",&age);
+    fprintf(fptr,"age = %d\n",age);
+    printf("\nEnter the salary for name:%s -> ",name);
+    scanf("%f",&salary);
+    fprintf(fptr,"salary = %f\n",salary);
+    fclose(fptr);
 
- 
-   }
-    
 
 
 
-
-
+    return 0;
+}
